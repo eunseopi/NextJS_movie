@@ -15,8 +15,8 @@ export default function Layout({children,}: {
     return (
         <html lang="en">
         <body>
-            <Navigation />
-            {children}
+        <Navigation />
+        {children}
         </body>
         </html>
     )
