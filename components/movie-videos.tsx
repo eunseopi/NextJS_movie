@@ -1,10 +1,10 @@
-import {API_URL} from "../app/(home)/page";
 import styles from "../styles/movie-videos.module.css"
+import {getMovieVideo} from "../app/api/route";
 
 async function getVideos(id: string){
     // await new Promise(resolve => setTimeout(resolve, 3000));
-    const response = await fetch(`${API_URL}/${id}/videos`);
-    return response.json();
+    const data = await getMovieVideo(id);
+    return data;
 }
 
 export default async function MovieVideos({id}: {id: string}) {
